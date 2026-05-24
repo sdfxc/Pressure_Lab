@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@400;700;900&family=Kantumruy+Pro:ital,wght@0,300..900;1,300..900&family=Outfit:wght@300..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Battambang", "Khmer OS Battambang", "Kantumruy Pro", "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  font-size: 100%; /* Default 16px font-size for normal browser size to prevent layout breaks on small screens */
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 102%; /* Beautiful relative enlargement for iPad/tablet screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 104%; /* Premium crisp scaling for laptops and desktops (Mac/Windows) */
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  font-weight: 500; /* Regular Khmer text weight is comfortable and easy to read */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark body {
+  background-color: #020617;
+}
+
+/* Make headers and emphasis elements crisp and properly bold */
+h1, h2, h3, h4, h5, h6, strong, font, .font-bold {
+  font-weight: 700 !important;
+}
+
+.font-semibold, .font-medium {
+  font-weight: 600 !important;
+}
+
+p, span, div, label, button, input, select, textarea {
+  text-shadow: 0 0 0.1px rgba(0,0,0,0.1); /* Subtle outline enhancer to keep thin strokes beautifully visible */
+}
+
+/* Beautiful responsive scaling for Khmer OS Battambang font classes to fit neatly in tight containers */
+.text-xs, .text-\[8px\], .text-\[9px\], .text-\[10px\], .text-\[11.5px\], .text-\[11px\], .text-\[9\.5px\], .text-\[10\.5px\], .text-\[12px\] {
+  font-size: 0.81rem !important; /* Fits perfectly, stays premium and distinct on narrow mobile views */
+}
+
+.text-sm {
+  font-size: 0.92rem !important;
+}
+
+.text-base {
+  font-size: 1.05rem !important;
+}
+
+.text-lg {
+  font-size: 1.2rem !important;
+}
+
+.text-xl {
+  font-size: 1.4rem !important;
+}
+
+.text-2xl {
+  font-size: 1.65rem !important;
+}
+
+/* Custom range input styling matching our color scheme */
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  border: 2px solid white;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: currentColor;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+}

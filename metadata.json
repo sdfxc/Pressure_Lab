@@ -1,0 +1,6 @@
+{
+  "name": "ពិសោធន៍សម្ពាធរូបវិទ្យា (Pressure Physics Lab)",
+  "description": "កម្មវិធីពិសោធន៍អន្តរកម្មស្តីពី សម្ពាធនៃអង្គធាតុរឹង សម្ពាធក្នុងសន្ទនីយ ការបញ្ជូនសម្ពាធក្នុងអង្គធាតុរាវ (គោលការណ៍ប៉ាស្កាល់) និងសម្ពាធបរិយាកាស។",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
