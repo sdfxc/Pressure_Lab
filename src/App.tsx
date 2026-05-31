@@ -10,6 +10,7 @@ import SolidPressure from './components/SolidPressure';
 import FluidPressure from './components/FluidPressure';
 import PascalPressure from './components/PascalPressure';
 import AtmosphericPressure from './components/AtmosphericPressure';
+import ApplicationsLab from './components/ApplicationsLab';
 import LabQuiz from './components/LabQuiz';
 import { 
   Square, 
@@ -20,7 +21,8 @@ import {
   GraduationCap, 
   Moon, 
   Sun,
-  Award
+  Award,
+  Sparkles
 } from 'lucide-react';
 
 export default function App() {
@@ -130,6 +132,18 @@ export default function App() {
           </button>
 
           <button
+            onClick={() => setActiveTab('applications')}
+            className={`flex-1 min-w-[124px] py-3 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${
+              activeTab === 'applications'
+                ? 'bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-950 shadow-md'
+                : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-850'
+            }`}
+          >
+            <Sparkles className="w-4 h-4 text-amber-500" />
+            ៥. ការអនុវត្តជាក់ស្តែង & ហ្គេម
+          </button>
+
+          <button
             onClick={() => setActiveTab('quiz')}
             className={`flex-1 min-w-[120px] py-3 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 ${
               activeTab === 'quiz'
@@ -138,7 +152,7 @@ export default function App() {
             }`}
           >
             <Award className="w-4 h-4 text-indigo-500" />
-            ៥. តេស្តសមត្ថភាព (Quiz)
+            ៦. តេស្តសមត្ថភាព (Quiz)
           </button>
 
         </div>
@@ -157,6 +171,7 @@ export default function App() {
               {activeTab === 'fluid' && <FluidPressure />}
               {activeTab === 'pascal' && <PascalPressure />}
               {activeTab === 'atmosphere' && <AtmosphericPressure />}
+              {activeTab === 'applications' && <ApplicationsLab />}
               {activeTab === 'quiz' && <LabQuiz />}
             </motion.div>
           </AnimatePresence>

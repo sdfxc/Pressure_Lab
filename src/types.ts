@@ -11,7 +11,7 @@ export interface QuizQuestion {
   explanation: string;
 }
 
-export type LabTab = 'solid' | 'fluid' | 'pascal' | 'atmosphere' | 'quiz';
+export type LabTab = 'solid' | 'fluid' | 'pascal' | 'atmosphere' | 'applications' | 'quiz';
 
 export interface SolidMaterial {
   name: string;
